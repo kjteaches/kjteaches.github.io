@@ -16,6 +16,8 @@ function toggle(btn) {
       }
 
 
-      document.addEventListener('DOMContentLoaded', () => {
-  toggle(document.querySelector('.item .trigger'));
+document.addEventListener('DOMContentLoaded', () => {
+  document.fonts.ready.then(() => {
+    toggle(document.querySelector('.item .trigger'));
+  });
 });
