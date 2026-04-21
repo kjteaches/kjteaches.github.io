@@ -164,6 +164,7 @@ body {
   font-family: var(--font-body);
   font-size: 0.82rem;
   color: #363636;
+  transition: color 0.3s ease;
 }
 
 .sample-arrow {
@@ -176,6 +177,10 @@ body {
 .sample-link:hover .sample-title,
 .sample-link:hover .sample-arrow {
   color: var(--text-hover);
+}
+
+.sample-link:hover .sample-desc {
+  color: var(--text);
 }
 
 p {
