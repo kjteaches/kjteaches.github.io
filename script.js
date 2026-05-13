@@ -21,3 +21,14 @@ document.addEventListener('DOMContentLoaded', () => {
     toggle(document.querySelector('.item .trigger'));
   });
 });
+
+function scaleToFit() {
+  const designW = 1280;
+  const designH = 720;
+  const scale = Math.min(window.innerWidth / designW, window.innerHeight / designH);
+  document.body.style.transform = `scale(${scale})`;
+  document.body.style.transformOrigin = 'center center';
+}
+
+scaleToFit();
+window.addEventListener('resize', scaleToFit);
