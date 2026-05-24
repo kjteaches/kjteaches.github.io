@@ -55,6 +55,10 @@ body {
   transition: color 0.35s ease;
 }
 
+.nameMain {
+  font-family: "Playfair";
+}
+
 .trigger:hover,
 .trigger.open {
   color: var(--text-hover);
