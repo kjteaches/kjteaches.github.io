@@ -11,184 +11,196 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Fira+Sans:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
     <div class="container">
-      <!-- Me -->
-      <div class="item">
-        <button class="trigger" onclick="toggle(this)">
-          KJ
-          <span class="arrow"></span>
-        </button>
-        <div class="panel">
-          <div class="panel-inner">
-            <p>
-              I’m a problem solver at heart, and software engineering and
-              technical writing are the ways I put that into practice.
-            </p>
-            <p>
-              My work spans Developer Relations and Advocacy, where I use
-              documentation and technical content to help developers succeed and
-              support product growth.
-            </p>
-
-            <p>
-              I also volunteer as a university instructor, teaching first-year
-              Computer Science and helping aspiring developers build a solid
-              foundation in programming.
-            </p>
-            <div class="links">
-              <a
-                target="_blank"
-                href="https://www.linkedin.com/in/kevin-m-3236782b5/"
-                >LinkedIn</a
-              >
-              <a target="_blank" href="https://medium.com/@kjteaches">Blog</a>
-              <a target="_blank" href="https://github.com/kjteaches">GitHub</a>
+      <main class="index">
+        <!-- Me -->
+        <section class="item">
+          <button class="trigger" aria-expanded="false" onclick="toggle(this)">
+            <span class="trigger-title">KJ</span>
+            <span class="mark" aria-hidden="true"></span>
+          </button>
+          <div class="panel">
+            <div class="panel-inner">
+              <p>
+                I'm a problem solver at heart, and software engineering and
+                technical writing are how I put that into practice.
+              </p>
+              <p>
+                My work spans Developer Relations and Advocacy, where I use
+                documentation and technical content to help developers succeed
+                and support product growth.
+              </p>
+              <p>
+                I also volunteer as a university instructor, teaching first-year
+                Computer Science and helping aspiring developers build a solid
+                foundation in programming.
+              </p>
+              <div class="links">
+                <a
+                  target="_blank"
+                  href="https://www.linkedin.com/in/kevin-m-3236782b5/"
+                  >LinkedIn</a
+                >
+                <a target="_blank" href="https://medium.com/@kjteaches">Blog</a>
+                <a target="_blank" href="https://github.com/kjteaches"
+                  >GitHub</a
+                >
+              </div>
             </div>
           </div>
-        </div>
-      </div>
+        </section>
 
-      <!-- Me write -->
-      <div class="item">
-        <button class="trigger" onclick="toggle(this)">
-          Technical Writer
-          <span class="arrow"></span>
-        </button>
-        <div class="panel">
-          <div class="panel-inner">
-            <div class="samples">
-              <a
-                class="sample-link"
-                target="_blank"
-                href="https://developer.goacoustic.com/acoustic-exp-analytics/docs/install-tealeaf-web-sdk-copy"
-              >
-                <div class="sample-text">
-                  <span class="sample-title"
-                    >Integrate the SDK into your web application</span
-                  >
-                  <span class="sample-desc">SDK integration guide</span>
-                </div>
-                <span class="sample-arrow">→</span>
-              </a>
-              <a
-                class="sample-link"
-                target="_blank"
-                href="https://developer.goacoustic.com/acoustic-content/docs/render-an-html-article-page-with-templates-and-layout"
-              >
-                <div class="sample-text">
-                  <span class="sample-title"
-                    >Render HTML pages from the headless CMS</span
-                  >
-                  <span class="sample-desc">API documentation</span>
-                </div>
-                <span class="sample-arrow">→</span>
-              </a>
-              <a
-                class="sample-link"
-                target="_blank"
-                href="https://www.advancedcustomfields.com/blog/rest-api-resource/"
-              >
-                <div class="sample-text">
-                  <span class="sample-title"
-                    >How to model a REST API resource</span
-                  >
-                  <span class="sample-desc">Developer tutorial</span>
-                </div>
-                <span class="sample-arrow">→</span>
-              </a>
-              <a
-                class="sample-link"
-                target="_blank"
-                href="https://getstream.io/glossary/api-throttling/"
-              >
-                <div class="sample-text">
-                  <span class="sample-title">API throttling</span>
-                  <span class="sample-desc"
-                    >Knowledge base entry (glossary)</span
-                  >
-                </div>
-                <span class="sample-arrow">→</span>
-              </a>
+        <!-- Me write -->
+        <section class="item">
+          <button class="trigger" aria-expanded="false" onclick="toggle(this)">
+            <span class="trigger-title">Technical Writer</span>
+            <span class="mark" aria-hidden="true"></span>
+          </button>
+          <div class="panel">
+            <div class="panel-inner">
+              <div class="samples">
+                <a
+                  class="sample-link"
+                  target="_blank"
+                  href="https://developer.goacoustic.com/acoustic-exp-analytics/docs/install-tealeaf-web-sdk-copy"
+                >
+                  <span class="bullet" aria-hidden="true"></span>
+                  <span class="sample-text">
+                    <span class="sample-title"
+                      >Integrate the SDK into your web application</span
+                    >
+                    <span class="sample-desc">SDK integration guide</span>
+                  </span>
+                  <span class="sample-arrow" aria-hidden="true">&rarr;</span>
+                </a>
+                <a
+                  class="sample-link"
+                  target="_blank"
+                  href="https://developer.goacoustic.com/acoustic-content/docs/render-an-html-article-page-with-templates-and-layout"
+                >
+                  <span class="bullet" aria-hidden="true"></span>
+                  <span class="sample-text">
+                    <span class="sample-title"
+                      >Render HTML pages from the headless CMS</span
+                    >
+                    <span class="sample-desc">API documentation</span>
+                  </span>
+                  <span class="sample-arrow" aria-hidden="true">&rarr;</span>
+                </a>
+                <a
+                  class="sample-link"
+                  target="_blank"
+                  href="https://www.advancedcustomfields.com/blog/rest-api-resource/"
+                >
+                  <span class="bullet" aria-hidden="true"></span>
+                  <span class="sample-text">
+                    <span class="sample-title"
+                      >How to model a REST API resource</span
+                    >
+                    <span class="sample-desc">Developer tutorial</span>
+                  </span>
+                  <span class="sample-arrow" aria-hidden="true">&rarr;</span>
+                </a>
+                <a
+                  class="sample-link"
+                  target="_blank"
+                  href="https://getstream.io/glossary/api-throttling/"
+                >
+                  <span class="bullet" aria-hidden="true"></span>
+                  <span class="sample-text">
+                    <span class="sample-title">API throttling</span>
+                    <span class="sample-desc"
+                      >Knowledge base entry (glossary)</span
+                    >
+                  </span>
+                  <span class="sample-arrow" aria-hidden="true">&rarr;</span>
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
+        </section>
 
-      <!-- Me code -->
-      <div class="item">
-        <button class="trigger" onclick="toggle(this)">
-          Software Engineer
-          <span class="arrow"></span>
-        </button>
-        <div class="panel">
-          <div class="panel-inner">
-            <div class="samples">
-              <a
-                class="sample-link"
-                target="_blank"
-                href="https://screenpapa.netlify.app/"
-              >
-                <div class="sample-text">
-                  <span class="sample-title">Screenshot markup tool</span>
-                  <span class="sample-desc"
-                    >SPA built with Svelte for reactive canvas/UI interactions
-                    and state management, and Vite for hot module reload and
-                    client-side routing</span
-                  >
-                </div>
-                <span class="sample-arrow">→</span>
-              </a>
-              <a
-                class="sample-link"
-                target="_blank"
-                href="https://gifpapa.netlify.app/"
-              >
-                <div class="sample-text">
-                  <span class="sample-title">Screen recording tool</span>
-                  <span class="sample-desc"
-                    >SPA built with Svelte for reactive UI and frame-by-frame
-                    canvas processing, and Vite for client-side routing</span
-                  >
-                </div>
-                <span class="sample-arrow">→</span>
-              </a>
+        <!-- Me code -->
+        <section class="item">
+          <button class="trigger" aria-expanded="false" onclick="toggle(this)">
+            <span class="trigger-title">Software Engineer</span>
+            <span class="mark" aria-hidden="true"></span>
+          </button>
+          <div class="panel">
+            <div class="panel-inner">
+              <div class="samples">
+                <a
+                  class="sample-link"
+                  target="_blank"
+                  href="https://screenpapa.netlify.app/"
+                >
+                  <span class="bullet" aria-hidden="true"></span>
+                  <span class="sample-text">
+                    <span class="sample-title">Screenshot markup tool</span>
+                    <span class="sample-desc"
+                      >SPA built with Svelte for reactive canvas/UI interactions
+                      and state management, and Vite for hot module reload and
+                      client-side routing</span
+                    >
+                  </span>
+                  <span class="sample-arrow" aria-hidden="true">&rarr;</span>
+                </a>
+                <a
+                  class="sample-link"
+                  target="_blank"
+                  href="https://gifpapa.netlify.app/"
+                >
+                  <span class="bullet" aria-hidden="true"></span>
+                  <span class="sample-text">
+                    <span class="sample-title">Screen recording tool</span>
+                    <span class="sample-desc"
+                      >SPA built with Svelte for reactive UI and frame-by-frame
+                      canvas processing, and Vite for client-side routing</span
+                    >
+                  </span>
+                  <span class="sample-arrow" aria-hidden="true">&rarr;</span>
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
+        </section>
 
-      <!-- Me teach -->
-      <div class="item">
-        <button class="trigger" onclick="toggle(this)">
-          Computer Science Teacher
-          <span class="arrow"></span>
-        </button>
-        <div class="panel">
-          <div class="panel-inner">
-            <p>
-              Since 2020, I've been volunteering as an Intro to Computer Science
-              instructor at
-              <a target="_blank" href="https://www.zetech.ac.ke/" class="tools"
-                >Zetech University</a
-              >, teaching both in-person and remotely.
-            </p>
-            <p>
-              My self-developed curriculum covers fundamentals primarily through
-              hands-on projects.
-            </p>
-            <p>
-              Teaching forces me to think clearly about systems, and it's a good
-              way to make CS feel approachable to students who wouldn't
-              otherwise consider it.
-            </p>
+        <!-- Me teach -->
+        <section class="item">
+          <button class="trigger" aria-expanded="false" onclick="toggle(this)">
+            <span class="trigger-title">Computer Science Teacher</span>
+            <span class="mark" aria-hidden="true"></span>
+          </button>
+          <div class="panel">
+            <div class="panel-inner">
+              <p>
+                Since 2020, I've been volunteering as an Intro to Computer
+                Science instructor at
+                <a
+                  target="_blank"
+                  href="https://www.zetech.ac.ke/"
+                  class="tools"
+                  >Zetech University</a
+                >, teaching both in-person and remotely.
+              </p>
+              <p>
+                My self-developed curriculum covers fundamentals primarily
+                through hands-on projects.
+              </p>
+              <p>
+                Teaching forces me to think clearly about systems, and it's a
+                good way to make CS feel approachable to students who wouldn't
+                otherwise consider it.
+              </p>
+            </div>
           </div>
-        </div>
-      </div>
+        </section>
+      </main>
     </div>
   </body>
 </html>
