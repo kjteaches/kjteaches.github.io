@@ -1,0 +1,29 @@
+---
+import Base from "../../layouts/Base.astro";
+import { getCollection, render } from "astro:content";
+import { readingTime } from "../../lib/post-meta";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog", ({ data }) => !data.draft);
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<Base title={`${post.data.title} | KJ`} description={post.data.description}>
+  <div class="container">
+    <a class="back" href="/blog">&larr; Blog</a>
+    <article class="post">
+      <p class="post-meta">{readingTime(post.body)}</p>
+      <h1>{post.data.title}</h1>
+      <div class="prose">
+        <Content />
+      </div>
+    </article>
+  </div>
+</Base>

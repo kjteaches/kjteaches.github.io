@@ -1,0 +1,37 @@
+---
+import Base from "../../layouts/Base.astro";
+import { getCollection } from "astro:content";
+import { readingTime } from "../../lib/post-meta";
+
+const posts = (await getCollection("blog", ({ data }) => !data.draft)).sort(
+  (a, b) => a.data.order - b.data.order,
+);
+---
+
+<Base
+  title="Blog | KJ"
+  description="Notes on technical writing, software, and teaching."
+>
+  <div class="container">
+    <header class="blog-header">
+      <a class="back" href="/">&larr; Back</a>
+      <h1>Blog</h1>
+    </header>
+
+    {posts.length === 0 ? (
+      <p>No posts yet — check back soon.</p>
+    ) : (
+      <ul class="post-list">
+        {posts.map((post) => (
+          <li>
+            <a class="post-card" href={`/blog/${post.id}`}>
+              <span class="post-meta">{readingTime(post.body)}</span>
+              <span class="post-title">{post.data.title}</span>
+              <span class="post-desc">{post.data.description}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    )}
+  </div>
+</Base>

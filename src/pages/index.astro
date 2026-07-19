@@ -1,0 +1,166 @@
+---
+import Base from "../layouts/Base.astro";
+import { getCollection } from "astro:content";
+import { readingTime } from "../lib/post-meta";
+
+const featuredPosts = (
+  await getCollection("blog", ({ data }) => data.featured && !data.draft)
+).sort((a, b) => a.data.order - b.data.order);
+
+const featuredProjects = (
+  await getCollection("projects", ({ data }) => data.featured && !data.draft)
+).sort((a, b) => a.data.order - b.data.order);
+---
+
+<Base title="KJ | Technical Writer & Software Engineer" noindex={true}>
+  <div class="container">
+    <main class="index">
+      <section class="item">
+        <button class="trigger" aria-expanded="false" onclick="toggle(this)">
+          <span class="trigger-title">KJ</span>
+          <span class="mark" aria-hidden="true"></span>
+        </button>
+        <div class="panel">
+          <div class="panel-inner">
+            <p>
+              I help companies win over the decision-makers who pay for their
+              products and the people who use them.
+            </p>
+            <p>
+              For buyers, that's blog posts and whitepapers tying the product to
+              outcomes. For developers, it's onboarding materials that get them
+              to a first win and documentation that keeps them successful.
+            </p>
+            <p>
+              Teaching Computer Science makes me better at explaining complex
+              ideas, while building my own tools makes me a better partner to
+              engineering teams.
+            </p>
+            <div class="links">
+              <a target="_blank" href="https://www.linkedin.com/in/kevin-m-3236782b5/">LinkedIn</a>
+              <a target="_blank" href="https://github.com/kjteaches">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="item">
+        <button class="trigger" aria-expanded="false" onclick="toggle(this)">
+          <span class="trigger-title">Technical Writer</span>
+          <span class="mark" aria-hidden="true"></span>
+        </button>
+        <div class="panel">
+          <div class="panel-inner">
+            <div class="samples">
+              <a class="sample-link" target="_blank" href="https://developer.goacoustic.com/acoustic-exp-analytics/docs/install-tealeaf-web-sdk-copy">
+                <span class="bullet" aria-hidden="true"></span>
+                <span class="sample-text">
+                  <span class="sample-title">Integrate the SDK into your web application</span>
+                  <span class="sample-desc">SDK integration guide in MDX via ReadMe.io</span>
+                </span>
+                <span class="sample-arrow" aria-hidden="true">&rarr;</span>
+              </a>
+              <a class="sample-link" target="_blank" href="https://developer.goacoustic.com/acoustic-content/docs/render-an-html-article-page-with-templates-and-layout">
+                <span class="bullet" aria-hidden="true"></span>
+                <span class="sample-text">
+                  <span class="sample-title">Render HTML pages from the headless CMS</span>
+                  <span class="sample-desc">API documentation in MDX via ReadMe.io</span>
+                </span>
+                <span class="sample-arrow" aria-hidden="true">&rarr;</span>
+              </a>
+              <a class="sample-link" target="_blank" href="https://www.advancedcustomfields.com/blog/rest-api-resource/">
+                <span class="bullet" aria-hidden="true"></span>
+                <span class="sample-text">
+                  <span class="sample-title">How to model a REST API resource</span>
+                  <span class="sample-desc">Developer tutorial</span>
+                </span>
+                <span class="sample-arrow" aria-hidden="true">&rarr;</span>
+              </a>
+              <a class="sample-link" target="_blank" href="https://getstream.io/glossary/api-throttling/">
+                <span class="bullet" aria-hidden="true"></span>
+                <span class="sample-text">
+                  <span class="sample-title">API throttling</span>
+                  <span class="sample-desc">Knowledge base entry (glossary)</span>
+                </span>
+                <span class="sample-arrow" aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="item">
+        <button class="trigger" aria-expanded="false" onclick="toggle(this)">
+          <span class="trigger-title">Software Engineer</span>
+          <span class="mark" aria-hidden="true"></span>
+        </button>
+        <div class="panel">
+          <div class="panel-inner">
+            <div class="samples">
+              {featuredProjects.map((project) => (
+                <a
+                  class="sample-link"
+                  href={project.data.url ?? `/projects/${project.id}`}
+                  {...(project.data.url ? { target: "_blank" } : {})}
+                >
+                  <span class="bullet" aria-hidden="true"></span>
+                  <span class="sample-text">
+                    <span class="sample-title">{project.data.title}</span>
+                    <span class="sample-desc">{project.data.description}</span>
+                  </span>
+                  <span class="sample-arrow" aria-hidden="true">&rarr;</span>
+                </a>
+              ))}
+            </div>
+            <a class="recent-all" href="/projects">View all projects &rarr;</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="item">
+        <button class="trigger" aria-expanded="false" onclick="toggle(this)">
+          <span class="trigger-title">Computer Science Teacher</span>
+          <span class="mark" aria-hidden="true"></span>
+        </button>
+        <div class="panel">
+          <div class="panel-inner">
+            <p>
+              I volunteer as an Intro to Computer Science instructor at
+              <a target="_blank" href="https://www.zetech.ac.ke/" class="tools">Zetech University</a>,
+              teaching both in-person and remotely.
+            </p>
+            <p>
+              My self-developed curriculum covers fundamentals primarily through
+              hands-on projects.
+            </p>
+            <p>
+              Teaching forces me to think clearly about systems, and it's a good
+              way to make CS feel approachable to students who wouldn't otherwise
+              consider it.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="recent">
+      <button class="recent-toggle" aria-expanded="false" onclick="toggleRecent(this)">
+        <span>Recent posts</span>
+        <span class="recent-caret" aria-hidden="true"></span>
+      </button>
+      <div class="recent-panel">
+        <div class="recent-list">
+          {featuredPosts.map((post) => (
+            <a class="recent-post" href={`/blog/${post.id}`}>
+              <span class="recent-post-title">{post.data.title}</span>
+              <span class="recent-post-meta">{readingTime(post.body)}</span>
+            </a>
+          ))}
+          <a class="recent-all" href="/blog">View all posts &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script is:inline src="/script.js" defer></script>
+</Base>

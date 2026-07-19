@@ -1,0 +1,36 @@
+---
+import Base from "../../layouts/Base.astro";
+import { getCollection } from "astro:content";
+
+const projects = (await getCollection("projects", ({ data }) => !data.draft)).sort(
+  (a, b) => a.data.order - b.data.order,
+);
+---
+
+<Base title="Projects | KJ" description="Things I've built.">
+  <div class="container">
+    <header class="blog-header">
+      <a class="back" href="/">&larr; Back</a>
+      <h1>Projects</h1>
+    </header>
+
+    {projects.length === 0 ? (
+      <p>No projects yet — check back soon.</p>
+    ) : (
+      <ul class="post-list">
+        {projects.map((project) => (
+          <li>
+            <a
+              class="post-card"
+              href={project.data.url ?? `/projects/${project.id}`}
+              {...(project.data.url ? { target: "_blank" } : {})}
+            >
+              <span class="post-title">{project.data.title}</span>
+              <span class="post-desc">{project.data.description}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    )}
+  </div>
+</Base>
