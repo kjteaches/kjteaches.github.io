@@ -1,13 +1,6 @@
----
-title: "This very site!"
-description: "Static site built with Astro and TypeScript with schema-validated Markdown content and built-in MDX support"
-# url: "https://github.com/kjteaches/kjteaches.github.io"
-stack: "TypeScript, Astro"
-featured: true
-order: 3
----
+# My Portfolio
 
-This site is a static portfolio and blog built with Astro and TypeScript. Every project and post is a
+This is a static portfolio and blog built with Astro. Every project and post is a
 Markdown file. Astro validates each file against a schema when the site builds
 and outputs static HTML. There's no database or CMS, and the only content type
 to manage is Markdown.
@@ -82,7 +75,7 @@ length.
    and write a body that becomes the project's page.
 4. Set `featured: true` to feature it on the home page, and use `order` to place
    it.
-5. Build. A valid file publishes itself; an invalid one fails the build and says
+5. Build. A valid file publishes itself while an invalid one fails the build and says
    what's wrong.
 
 ## Running it
