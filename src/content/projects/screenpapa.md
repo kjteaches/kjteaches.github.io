@@ -4,5 +4,5 @@ description: "Screenshot editing and annotation tool built in Svelte.js using th
 url: "https://screenpapa.netlify.app/"
 stack: "Svelte + Canvas, Clipboard and File APIs"
 featured: true
-order: 1
+order: 2
 ---
