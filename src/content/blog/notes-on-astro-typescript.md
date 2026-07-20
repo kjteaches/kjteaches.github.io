@@ -35,9 +35,8 @@ The other options I was weighing and eventually decided against:
 - **Storyblok**, my [favourite headless CMS](https://medium.com/@kjteaches/a-frustrated-content-developers-quest-abandoning-strapi-for-storyblok-s-headless-promise-5b655849217b), was also too far from Markdown and too
   complex for something this small.
 - **Jekyll** works great with GitHub Pages out of the box, but it isn't as
-  performant and compatibility is too narrow for a tinkerer.
+  performant and compatibility is too narrow for a tinkerer. Not going with Jekyll meant I had to [set up my own GitHub Action for deployment](https://github.com/kjteaches/kjteaches.github.io/blob/main/.github/workflows/deploy.yml), which I _did_ hate, but that was a one-time annoyance.
 
-A week was all it took, and I never got around to writing the "wasn't for me"
-post, which tells you how it went. If you've been eyeing Astro or TypeScript
-from a safe distance like I was, take that as your nudge to give them a week.
+If you've been eyeing Astro or TypeScript
+from a safe distance like I was, take that as your sign to give them a week.
 Worst case, you lose a week. Best case, you end up like me, egg on face.
