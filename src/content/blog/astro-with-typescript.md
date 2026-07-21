@@ -2,7 +2,7 @@
 title: "Notes on Astro + TypeScript"
 description: "Well, that was easier than I expected"
 featured: true
-order: 1
+order: 2
 draft: false
 ---
 
