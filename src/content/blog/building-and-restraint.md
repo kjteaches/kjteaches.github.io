@@ -24,7 +24,7 @@ Which brings me to April 2026, when I was finally given access to an e-commerce 
 
 This was the dashboard for the custom CMS it was using:
 
-![Custom CMS screenshot](/src/content/images/the-cms-in-question.jpg)
+![Custom CMS screenshot](../images/the-cms-in-question.jpg)
 
 If you're a certain kind of person, you just felt your skin crawl. If you’re me, you have a decision to make: A) encourage the builder’s spirit as yours was, years ago or B) tell them about WordPress.
 
