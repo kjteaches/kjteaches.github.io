@@ -1,8 +1,8 @@
 ---
 title: "Investigating node_modules"
 description: "Find out why they call me the Sherlock Holmes of the programming world"
-featured: true
-order: 3
+featured: false
+order: 4
 draft: false
 ---
 

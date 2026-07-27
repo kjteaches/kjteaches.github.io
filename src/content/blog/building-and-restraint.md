@@ -1,6 +1,6 @@
 ---
 title: "Notes on building"
-description: "We're so preoccupied with whether we can, we don’t stop to think if we should"
+description: "We're so preoccupied with whether we can ''one-shot any SaaS'', we don’t stop to think if we should"
 featured: true
 order: 2
 draft: false

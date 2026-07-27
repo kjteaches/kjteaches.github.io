@@ -1,5 +1,7 @@
 
+import __ASTRO_IMAGE_IMPORT_Z7WMnX from "../images/Attention-head-view-for-GPT-2-for-the-input-text-The-quick-brown-fox-jumps-over-the.png?astroContentImageFlag=&importer=src%2Fcontent%2Fblog%2Fwriting-for-hostile-readers.md";
+import __ASTRO_IMAGE_IMPORT_xpfRJ from "../images/f_reading_pattern_eyetracking_nngroup.jpg?astroContentImageFlag=&importer=src%2Fcontent%2Fblog%2Fwriting-for-hostile-readers.md";
 import __ASTRO_IMAGE_IMPORT_Z1kuLHf from "../images/node modules.gif?astroContentImageFlag=&importer=src%2Fcontent%2Fblog%2Fnode-modules.md";
 import __ASTRO_IMAGE_IMPORT_Z14DvsE from "../images/the-cms-in-question.jpg?astroContentImageFlag=&importer=src%2Fcontent%2Fblog%2Fbuilding-and-restraint.md";
-export default new Map([["../images/node modules.gif?astroContentImageFlag=&importer=src%2Fcontent%2Fblog%2Fnode-modules.md", __ASTRO_IMAGE_IMPORT_Z1kuLHf], ["../images/the-cms-in-question.jpg?astroContentImageFlag=&importer=src%2Fcontent%2Fblog%2Fbuilding-and-restraint.md", __ASTRO_IMAGE_IMPORT_Z14DvsE]]);
+export default new Map([["../images/Attention-head-view-for-GPT-2-for-the-input-text-The-quick-brown-fox-jumps-over-the.png?astroContentImageFlag=&importer=src%2Fcontent%2Fblog%2Fwriting-for-hostile-readers.md", __ASTRO_IMAGE_IMPORT_Z7WMnX], ["../images/f_reading_pattern_eyetracking_nngroup.jpg?astroContentImageFlag=&importer=src%2Fcontent%2Fblog%2Fwriting-for-hostile-readers.md", __ASTRO_IMAGE_IMPORT_xpfRJ], ["../images/node modules.gif?astroContentImageFlag=&importer=src%2Fcontent%2Fblog%2Fnode-modules.md", __ASTRO_IMAGE_IMPORT_Z1kuLHf], ["../images/the-cms-in-question.jpg?astroContentImageFlag=&importer=src%2Fcontent%2Fblog%2Fbuilding-and-restraint.md", __ASTRO_IMAGE_IMPORT_Z14DvsE]]);
 		
