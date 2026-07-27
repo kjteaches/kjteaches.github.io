@@ -13,20 +13,24 @@ Look at this heatmap from a [2006 study](https://www.nngroup.com/articles/f-shap
 ![F-shaped reading pattern](../images/f_reading_pattern_eyetracking_nngroup.jpg)
 _Source: Nielsen Norman Group_
 
-That's called the F-shaped reading pattern. People only read the first few words of a line, then taper off as the piece goes on.
+That's called the F-shaped reading pattern, and it shows that people only read the top of the page closely, then skim down the left margin.
 
-That's general reading. Anyone who's worked in software will tell you skimming only gets worse with technical material.
+That's general reading, but anyone who's worked in software will tell you skimming only gets worse with technical material.
 
-Documentation, blog posts, onboarding material – it all stands between developers and what they're trying to build. You can use it to get them there faster, or you can stand in their way.
+Documentation, blog posts, onboarding material, all that stands between developers and what they're trying to build. You can use it to get them there faster, or you can stand in their way.
 
-They've been looking for a way to sidestep documentation for decades, and it's why they [latched onto LLMs so quickly](https://www.gitbook.com/blog/ai-docs-data-2025). But the technology is incidental. If you handed them a cursed mirror that still provided usable SDK config, they'd use it without a second thought.
+Either way, though, you'll come up against the same issue, which is that they absolutely do not want to read.
 
-But the machines have to get their information from somewhere too. And in their own way, [they're not reading either](https://www.researchgate.net/figure/Attention-head-view-for-GPT-2-for-the-input-text-The-quick-brown-fox-jumps-over-the_fig1_335784229).
+Documentation has only ever been a means to an end, which is why they [latched onto LLMs so quickly](https://www.gitbook.com/blog/ai-docs-data-2025).
+
+Your only path forward is to help them get from A to B as quickly as possible. So quickly, in fact, that you're practically invisible in the process. Like a great OS, if you can stay out of the user's way long enough that they forget you're there, you're crushing it.
+
+This all puts us in an awkward position because, even though people aren't reading what we write, we still _have_ to write. After all, even the machines have to get their information from _somewhere_. And in their own way, [they're not reading either](https://www.researchgate.net/figure/Attention-head-view-for-GPT-2-for-the-input-text-The-quick-brown-fox-jumps-over-the_fig1_335784229).
 
 ![Visualization of attention in transformers](../images/Attention-head-view-for-GPT-2-for-the-input-text-The-quick-brown-fox-jumps-over-the.png)
 _Source: [Jesse Vig](https://www.researchgate.net/profile/Jesse-Vig)_
 
-Luckily, the rules that make technical writing work for people are the same ones that make it work for everything else.
+Luckily, the rules that make technical writing a success for people are the same ones that make it work for everything else.
 
 Let's go over how to engineer resources that make information easy to extract so they serve whatever comes looking for it.
 
