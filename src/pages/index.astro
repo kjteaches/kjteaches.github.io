@@ -5,7 +5,7 @@ import { readingTime } from "../lib/post-meta";
 
 const featuredPosts = (
   await getCollection("blog", ({ data }) => data.featured && !data.draft)
-).sort((a, b) => a.data.order - b.data.order);
+).sort((a, b) => b.data.order - a.data.order);
 
 const featuredProjects = (
   await getCollection("projects", ({ data }) => data.featured && !data.draft)

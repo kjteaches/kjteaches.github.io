@@ -1,8 +1,8 @@
 ---
 title: "Notes on building"
 description: "We're so preoccupied with whether we can ''one-shot any SaaS'', we don’t stop to think if we should"
-featured: true
-order: 2
+featured: false
+order: 3
 draft: false
 ---
 

@@ -2,7 +2,7 @@
 title: "Notes on writing for the hostile reader"
 description: "Nothing I've ever written was meant to be read"
 featured: true
-order: 3
+order: 5
 draft: false
 ---
 

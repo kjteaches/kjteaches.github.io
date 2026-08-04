@@ -2,7 +2,7 @@
 title: "Notes on system design and knowing your users"
 description: "How do you build an app when half your users don't have smartphones?"
 featured: true
-order: 1
+order: 4
 draft: false
 ---
 

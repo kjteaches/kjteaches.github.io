@@ -2,7 +2,7 @@
 title: "Investigating node_modules"
 description: "Find out why they call me the Sherlock Holmes of the programming world"
 featured: false
-order: 4
+order: 2
 draft: false
 ---
 
