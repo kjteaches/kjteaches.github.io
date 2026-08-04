@@ -12,7 +12,7 @@ As a technical writer, if I create an API guide, success is when someone can int
 
 With teaching, however, the goal is getting people to understand how you get from A to B, and friction is a key ingredient. It's _the_ ingredient.
 
-Just two years ago, "disillusioned" was the last word I would have used to describe my feelings towards teaching. Today, nearly a year since the last time I was in a classroom, it's usually the first word that comes to mind.
+Just two years ago, "disillusioned" was the last word I would have used to describe my feelings towards teaching. Today, nearly a year since the last time I was in a classroom, it's the first word that comes to mind.
 
 If I had to name a reason, I'd say that I couldn't get my students to ignore the solve-every-problem-set-instantly app right in front of them.
 
