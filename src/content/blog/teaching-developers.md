@@ -16,8 +16,6 @@ Just two years ago, "disillusioned" was the last word I would have used to descr
 
 If I had to name a reason, I'd say that I couldn't get my students to ignore the solve-every-problem-set-instantly app right in front of them.
 
-The students in the first cohort I ever taught would put their number guessing game Python scripts on a billboard if they could. They formed complex relationships across projects, composed of equal parts collaboration and competition.
-
-The students in my last cohort would hand me production-ready apps without so much as a flicker of emotion. They almost never spoke to anyone else, and none of them could explain how these apps worked.
+The students in the first cohort I ever taught would put their number guessing game Python scripts on a billboard if they could. The students in my last cohort would hand me production-ready apps without so much as a flicker of emotion.
 
 I'm not here to say whether that's good or bad for them. What I will say is that it's been devastating for me, because it's taken the joy out of teaching.
