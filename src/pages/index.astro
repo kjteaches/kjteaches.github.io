@@ -10,147 +10,193 @@ const featuredPosts = (
 const featuredProjects = (
   await getCollection("projects", ({ data }) => data.featured && !data.draft)
 ).sort((a, b) => a.data.order - b.data.order);
+
+const samples = [
+  {
+    title: "Integrate the SDK into your web application",
+    description: "SDK integration guide in MDX via ReadMe.io",
+    url: "https://developer.goacoustic.com/acoustic-exp-analytics/docs/install-tealeaf-web-sdk-copy",
+  },
+  {
+    title: "Render HTML pages from the headless CMS",
+    description: "API documentation in MDX via ReadMe.io",
+    url: "https://developer.goacoustic.com/acoustic-content/docs/render-an-html-article-page-with-templates-and-layout",
+  },
+  {
+    title: "How to model a REST API resource",
+    description: "Developer tutorial",
+    url: "https://www.advancedcustomfields.com/blog/rest-api-resource/",
+  },
+  {
+    title: "API throttling",
+    description: "Knowledge base entry (glossary)",
+    url: "https://getstream.io/glossary/api-throttling/",
+  },
+];
 ---
 
 <Base title="KJ | Technical Writer & Software Engineer" noindex={true}>
-  <div class="container">
-    <main class="index">
-      <section class="item">
-        <button class="trigger" aria-expanded="false" onclick="toggle(this)">
-          <span class="trigger-title">KJ</span>
-          <span class="mark" aria-hidden="true"></span>
+  <main>
+    <div class="group group--name">
+      <p class="whisper">I&rsquo;m Kevin but everyone calls me</p>
+      <h1 class="shout name">
+        <button
+          class="trigger"
+          type="button"
+          aria-expanded="false"
+          aria-controls="panel-kj"
+        >
+          KJ
         </button>
-        <div class="panel">
-          <div class="panel-inner">
-            <p>
-              Technical writer with a background in software engineering and teaching computer science.
+      </h1>
+      <div class="panel" id="panel-kj">
+        <div class="panel-inner">
+          <div class="panel-body">
+            <p class="bio">
+              I figure out what confuses people about a product and do something about it.
             </p>
-            <p>
-              I help companies convince decision-makers that their product is worth paying for, and show developers how to use it.
-            </p>
-            <div class="links">
+            <div class="socials">
               <a target="_blank" href="https://www.linkedin.com/in/kevin-m-3236782b5/">LinkedIn</a>
               <a target="_blank" href="https://github.com/kjteaches">GitHub</a>
               <a target="_blank" href="https://medium.com/@kjteaches">Medium</a>
             </div>
           </div>
         </div>
-      </section>
-      <section class="item">
-        <button class="trigger" aria-expanded="false" onclick="toggle(this)">
-          <span class="trigger-title">Technical Writer</span>
-          <span class="mark" aria-hidden="true"></span>
+      </div>
+    </div>
+
+    <div class="rule" aria-hidden="true"></div>
+
+    <div class="group">
+      <p class="shout role">
+        <button
+          class="trigger"
+          type="button"
+          aria-expanded="false"
+          aria-controls="panel-writer"
+        >
+          Technical writer
         </button>
-        <div class="panel">
-          <div class="panel-inner">
-            <div class="samples">
-              <a class="sample-link" target="_blank" href="https://developer.goacoustic.com/acoustic-exp-analytics/docs/install-tealeaf-web-sdk-copy">
-                <span class="bullet" aria-hidden="true"></span>
-                <span class="sample-text">
-                  <span class="sample-title">Integrate the SDK into your web application</span>
-                  <span class="sample-desc">SDK integration guide in MDX via ReadMe.io</span>
-                </span>
-                <span class="sample-arrow" aria-hidden="true">&rarr;</span>
-              </a>
-              <a class="sample-link" target="_blank" href="https://developer.goacoustic.com/acoustic-content/docs/render-an-html-article-page-with-templates-and-layout">
-                <span class="bullet" aria-hidden="true"></span>
-                <span class="sample-text">
-                  <span class="sample-title">Render HTML pages from the headless CMS</span>
-                  <span class="sample-desc">API documentation in MDX via ReadMe.io</span>
-                </span>
-                <span class="sample-arrow" aria-hidden="true">&rarr;</span>
-              </a>
-              <a class="sample-link" target="_blank" href="https://www.advancedcustomfields.com/blog/rest-api-resource/">
-                <span class="bullet" aria-hidden="true"></span>
-                <span class="sample-text">
-                  <span class="sample-title">How to model a REST API resource</span>
-                  <span class="sample-desc">Developer tutorial</span>
-                </span>
-                <span class="sample-arrow" aria-hidden="true">&rarr;</span>
-              </a>
-              <a class="sample-link" target="_blank" href="https://getstream.io/glossary/api-throttling/">
-                <span class="bullet" aria-hidden="true"></span>
-                <span class="sample-text">
-                  <span class="sample-title">API throttling</span>
-                  <span class="sample-desc">Knowledge base entry (glossary)</span>
-                </span>
-                <span class="sample-arrow" aria-hidden="true">&rarr;</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      <section class="item">
-        <button class="trigger" aria-expanded="false" onclick="toggle(this)">
-          <span class="trigger-title">Software Engineer</span>
-          <span class="mark" aria-hidden="true"></span>
-        </button>
-        <div class="panel">
-          <div class="panel-inner">
-            <div class="samples">
-              {featuredProjects.map((project) => (
-                <a
-                  class="sample-link"
-                  href={project.data.url ?? `/projects/${project.id}`}
-                  {...(project.data.url ? { target: "_blank" } : {})}
-                >
-                  <span class="bullet" aria-hidden="true"></span>
-                  <span class="sample-text">
-                    <span class="sample-title">{project.data.title}</span>
-                    <span class="sample-desc">{project.data.description}</span>
-                  </span>
-                  <span class="sample-arrow" aria-hidden="true">&rarr;</span>
+      </p>
+      <div class="panel" id="panel-writer">
+        <div class="panel-inner">
+          <div class="panel-body">
+            <div class="items">
+              {samples.map((sample) => (
+                <a class="item" target="_blank" href={sample.url}>
+                  <h3>{sample.title}</h3>
+                  <p>{sample.description}</p>
                 </a>
               ))}
             </div>
-            <a class="recent-all" href="/projects">View all projects &rarr;</a>
           </div>
-        </div>
-      </section>
-
-      <section class="item">
-        <button class="trigger" aria-expanded="false" onclick="toggle(this)">
-          <span class="trigger-title">Computer Science Teacher</span>
-          <span class="mark" aria-hidden="true"></span>
-        </button>
-        <div class="panel">
-          <div class="panel-inner">
-            <p>
-              I volunteer as an Intro to Computer Science instructor at <a target="_blank" href="https://www.zetech.ac.ke/" class="tools">Zetech University</a>,
-              teaching both in-person and remotely.
-            </p>
-            <p>
-              My self-developed curriculum covers fundamentals primarily through
-              hands-on projects.
-            </p>
-            <p>
-              Teaching forces me to think clearly about systems, and it's a good
-              way to make CS feel approachable to students who wouldn't otherwise
-              consider it.
-            </p>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <div class="recent">
-      <button class="recent-toggle" aria-expanded="false" onclick="toggleRecent(this)">
-        <span>Recent posts</span>
-        <span class="recent-caret" aria-hidden="true"></span>
-      </button>
-      <div class="recent-panel">
-        <div class="recent-list">
-          {featuredPosts.map((post) => (
-            <a class="recent-post" href={`/blog/${post.id}`}>
-              <span class="recent-post-title">{post.data.title}</span>
-              <span class="recent-post-meta">{readingTime(post.body)}</span>
-            </a>
-          ))}
-          <a class="recent-all" href="/blog">View all posts &rarr;</a>
         </div>
       </div>
     </div>
+
+    <div class="group">
+      <p class="whisper">with previous experience as a</p>
+      <div class="shout prev">
+        <span class="prev-line"
+          ><button
+            class="trigger"
+            type="button"
+            aria-expanded="false"
+            aria-controls="panel-engineer"
+          >
+            Software engineer
+          </button>
+          <span class="amp">&amp;</span></span
+        >
+        <div class="panel" id="panel-engineer">
+          <div class="panel-inner">
+            <div class="panel-body">
+              <div class="items">
+                {featuredProjects.map((project) => (
+                  <a
+                    class="item"
+                    href={project.data.url ?? `/projects/${project.id}`}
+                    {...(project.data.url ? { target: "_blank" } : {})}
+                  >
+                    <h3>{project.data.title}</h3>
+                    <p>{project.data.description}</p>
+                  </a>
+                ))}
+              </div>
+              <a class="btn" href="/projects">See all projects</a>
+            </div>
+          </div>
+        </div>
+
+        <span class="prev-line"
+          ><button
+            class="trigger"
+            type="button"
+            aria-expanded="false"
+            aria-controls="panel-teacher"
+          >
+            Computer science teacher
+          </button></span
+        >
+      </div>
+
+      <div class="panel" id="panel-teacher">
+        <div class="panel-inner">
+          <div class="panel-body">
+            <p class="bio">
+              I volunteer as an Intro to Computer Science instructor at <a
+                target="_blank"
+                href="https://www.zetech.ac.ke/">Zetech University</a
+              >, with a self-developed
+              curriculum covers fundamentals through hands-on
+              projects.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="group">
+      <div>
+        <button
+          class="trigger posts-trigger"
+          type="button"
+          aria-expanded="false"
+          aria-controls="panel-posts"
+        >
+          Recent posts
+        </button>
+      </div>
+      <div class="panel" id="panel-posts">
+        <div class="panel-inner">
+          <div class="panel-body">
+            <div class="posts-list">
+              {featuredPosts.map((post) => (
+                <div class="post-row">
+                  <a href={`/blog/${post.id}`}>{post.data.title}</a><span class="time">{readingTime(post.body)}</span>
+                </div>
+              ))}
+            </div>
+            <a class="btn" href="/blog">View all posts</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="hint">
+    <div class="hint-bubble" id="hint-text" role="tooltip">
+      Hover over some text!
+    </div>
+    <button
+      class="hint-btn"
+      type="button"
+      aria-expanded="false"
+      aria-controls="hint-text"
+      aria-label="How this page works"
+    >
+      <span>?</span>
+    </button>
   </div>
 
   <script is:inline src="/script.js" defer></script>

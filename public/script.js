@@ -1,43 +1,43 @@
-function toggle(btn) {
-  const panel = btn.nextElementSibling;
-  const isOpen = btn.classList.contains("open");
+const hint = document.querySelector(".hint");
+const hintBtn = hint.querySelector(".hint-btn");
 
-  document.querySelectorAll(".trigger").forEach((t) => {
-    t.classList.remove("open");
-    t.setAttribute("aria-expanded", "false");
-    t.nextElementSibling.style.maxHeight = null;
-  });
+hintBtn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  const open = hint.classList.toggle("show");
+  hintBtn.setAttribute("aria-expanded", String(open));
+});
 
-  if (!isOpen) {
-    btn.classList.add("open");
-    btn.setAttribute("aria-expanded", "true");
-    panel.style.maxHeight = panel.scrollHeight + "px";
-  }
-}
+document.addEventListener("click", () => {
+  hint.classList.remove("show");
+  hintBtn.setAttribute("aria-expanded", "false");
+});
 
-function toggleRecent(btn) {
-  const panel = btn.nextElementSibling;
-  const isOpen = btn.classList.toggle("open");
-  btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
-  panel.style.maxHeight = isOpen ? panel.scrollHeight + "px" : null;
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  const openFirst = () => toggle(document.querySelector(".item .trigger"));
-  if (document.fonts && document.fonts.ready) {
-    document.fonts.ready.then(openFirst);
-  } else {
-    openFirst();
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    hint.classList.remove("show");
+    hintBtn.setAttribute("aria-expanded", "false");
   }
 });
 
-window.addEventListener("resize", () => {
-  document
-    .querySelectorAll(".trigger.open, .recent-toggle.open")
-    .forEach((openBtn) => {
-      const panel = openBtn.nextElementSibling;
-      panel.style.maxHeight = "none";
-      const height = panel.scrollHeight;
-      panel.style.maxHeight = height + "px";
+const triggers = document.querySelectorAll(".trigger");
+
+triggers.forEach((trigger) => {
+  trigger.addEventListener("click", () => {
+    const panel = document.getElementById(
+      trigger.getAttribute("aria-controls"),
+    );
+    const isOpen = trigger.getAttribute("aria-expanded") === "true";
+
+    triggers.forEach((other) => {
+      other.setAttribute("aria-expanded", "false");
+      document
+        .getElementById(other.getAttribute("aria-controls"))
+        .classList.remove("open");
     });
+
+    if (!isOpen) {
+      trigger.setAttribute("aria-expanded", "true");
+      panel.classList.add("open");
+    }
+  });
 });

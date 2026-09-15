@@ -22,11 +22,13 @@ const { title, description, noindex = true } = Astro.props;
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Fira+Sans:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400&family=Young+Serif&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
+    <div class="mottle" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
     <slot />
   </body>
 </html>
