@@ -20,7 +20,7 @@ Dual booting, the last time I tried it, was relatively straightforward. Today, a
 
 Through a _ton_ of trial and error, however, I managed to find a solid workaround that held up through several cold boot cycles. I suspect I'll be going back to it a lot in this, the Linux Century, so I'm going to log it here for myself and whoever else might be interested!
 
-Basically, Windows Boot Manager does not detect Linux installations by default, as Dibakar Ghosh notes in How-To Geek, and Windows tends to put its boot manager back in charge after updates. On a machine running both systems, GRUB should own the boot menu instead.
+Basically, Windows Boot Manager doesn't detect Linux installations by default, and Windows tends to put its boot manager back in charge after updates. On a machine running both systems, GRUB should own the boot menu instead.
 
 Here's how to keep it there:
 
