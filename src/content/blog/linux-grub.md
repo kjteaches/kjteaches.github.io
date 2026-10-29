@@ -16,7 +16,7 @@ The owner was, understandably, hesitant to make such a big switch, so I recommen
 
 To my utter surprise, however, Microsoft wants you locked to their platform so they make it difficult to test out other options. I couldn't have seen this coming and neither could you.
 
-Dual booting, at least the lsat time I tried it, was relatively straightforward. Today, at least with Windows, it's a confusing mess designed to frustrate users into giving up entirely.
+Dual booting, the last time I tried it, was relatively straightforward. Today, at least with Windows, it's a confusing mess designed to frustrate users into giving up entirely.
 
 Through a _ton_ of trial and error, however, I managed to find a solid workaround that held up through several cold boot cycles. I suspect I'll be going back to it a lot in this, the Linux Century, so I'm going to log it here for myself and whoever else might be interested!
 
