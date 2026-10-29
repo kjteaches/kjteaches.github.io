@@ -8,11 +8,13 @@ draft: false
 
 I recently had the pleasure of giving an old laptop a new lease on life.
 
-It was an absolute powerhouse – for the budget – when I recommended it to the buyer over 10 years ago but today it can barely hold a charge. Its 4GB of RAM, 500GB hard drive and soldered everything else aren't even good for parts these days, but it's _perfect_ for Linux.
+It's a Lenovo G500, and it was an absolute powerhouse – for the budget anyway – when I recommended it to the buyer over 10 years ago. Today, though, it can barely run more than a handful of browser tabs smoothly.
 
-The user was, understandably, hesitant to make such a big switch, so I recommended dual booting so it's trivial to switch back if needed.
+What's more, the 4GB of RAM, 500GB hard drive and soldered everything else aren't good for parts any more, but they're _perfect_ for Linux.
 
-To my utter surprise, however, Microsoft wants you locked to their platform so they make it difficult to test out other options. I couldn't have seen this coming and neither did you.
+The owner was, understandably, hesitant to make such a big switch, so I recommended dual booting so it's trivial to switch back if needed.
+
+To my utter surprise, however, Microsoft wants you locked to their platform so they make it difficult to test out other options. I couldn't have seen this coming and neither could you.
 
 Dual booting, at least the lsat time I tried it, was relatively straightforward. Today, at least with Windows, it's a confusing mess designed to frustrate users into giving up entirely.
 
